@@ -1,0 +1,27 @@
+{
+  "name": "log3",
+  "version": "1.0.0",
+  "description": "Easy logging for node.js, with automatic file/line output",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielgindi/node-log3"
+  },
+  "keywords": [
+    "log",
+    "log2",
+    "log3",
+    "stacktrace"
+  ],
+  "author": "Daniel Cohen Gindi <danielgindi@gmail.com> (https://github.com/danielgindi)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielgindi/node-log3/issues"
+  },
+  "homepage": "https://github.com/danielgindi/node-log3",
+  "dependencies": {
+  }
+}
