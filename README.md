@@ -50,7 +50,7 @@ Name | Type | Default | Explanation
   `title` | `boolean` | `false` | Log current process title
   `pid` | `boolean` | `false` | Log current process id
   `hostname` | `boolean` | `false` | Log current machine name
-  `console` | `Array.<String>` | `['error','warn']` | Array of levels that are outputted to console too
+  `console` | `Array.<String>` | `['fatal']` | Array of levels that are outputted to console too
   `autoorigin` | `boolean` | `true` | Will try to autodetect origin of log call
   `origin` | `String` | `null` | Predefined origin to log, when `autoorigin` is disabled
   
