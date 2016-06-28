@@ -8,7 +8,7 @@ var defaults = {
     , title             : false
     , pid               : false
     , hostname          : false
-    , console           : [ 'debug', 'fatal' ]
+    , console           : [ 'fatal' ]
     , autoorigin        : true
     , origin            : null
 };
@@ -51,7 +51,7 @@ var fatal = function (message, origin) { };
  * @param {boolean=false} options.title - Log current process title
  * @param {boolean=false} options.pid - Log current process id
  * @param {boolean=false} options.hostname - Log current machine name
- * @param {Array.<String>?} options.console=['error','warn'] - Array of levels that are outputted to console too
+ * @param {Array.<String>?} options.console=['fatal'] - Array of levels that are outputted to console too
  * @param {boolean=true} options.autoorigin - Will try to autodetect origin of log call
  * @param {String?} options.origin - Predefined origin to log, when `autoorigin` is disabled
  * @returns {LoggerInstance}
