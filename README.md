@@ -39,6 +39,8 @@ log.debug('A log used for debugging, specifying a custom origin', 'server.js, st
 log('A log with a custom level', 'hey', 'server.js, test()');
 // 2016-06-28T03:14:20.000Z | HEY   | server.js, test() | A log with a custom level
 
+log.end(); // Closes the writable stream (To file etc.)
+
 ```
 
 The options you can pass are:
