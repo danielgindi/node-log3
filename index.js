@@ -43,6 +43,9 @@ var error = function (message, origin) { };
 /** @memberof LoggerInstance */
 var fatal = function (message, origin) { };
 
+/** @memberof LoggerInstance */
+var end = function () { };
+
 /**
  *
  * @param {Object?} options
