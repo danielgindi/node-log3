@@ -202,6 +202,13 @@ var Log3 = function Log3 (options) {
     logger.fatal = function __logger_fatal (message, location) {
         logger(message, 'fatal', location);
     };
+    
+    logger.end = function () {
+        if (out) {
+            out.end();
+            out= null;
+        }
+    };
 
     /**
      * @type LoggerInstance
