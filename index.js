@@ -84,7 +84,7 @@ var Log3 = function Log3 (options) {
 
     // Open stream if necessary
     if (typeof out === 'string') {
-        out = Fs.createWriteStream(out, { encoding: 'utf8', flags: 'a' });
+        out = Fs.createWriteStream(out, { encoding: 'utf8', flags: 'a+' });
     }
 
     // Helper to output to console
