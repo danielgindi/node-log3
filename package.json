@@ -1,6 +1,6 @@
 {
   "name": "log3",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Easy logging for node.js, with automatic file/line output",
   "main": "index.js",
   "scripts": {
