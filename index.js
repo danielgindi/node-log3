@@ -21,30 +21,24 @@ var padRight = function (val, length, char) {
 };
 
 /**
+ * @typedef {Function} LoggerFunctionCall
+ * @param {String} message
+ * @param {String?} origin
+ */
+
+/**
  * @typedef {Function} LoggerInstance
  * @param {String} message
  * @param {String?} level='info'
  * @param {String?} origin
  * @param {{Function(err: ?, message: String)}} callback
+ * @property {LoggerFunctionCall} debug
+ * @property {LoggerFunctionCall} info
+ * @property {LoggerFunctionCall} warn
+ * @property {LoggerFunctionCall} error
+ * @property {LoggerFunctionCall} fatal
+ * @property {Function} end
  */
-
-/** @memberof LoggerInstance */
-var debug = function (message, origin) { };
-
-/** @memberof LoggerInstance */
-var info = function (message, origin) { };
-
-/** @memberof LoggerInstance */
-var warn = function (message, origin) { };
-
-/** @memberof LoggerInstance */
-var error = function (message, origin) { };
-
-/** @memberof LoggerInstance */
-var fatal = function (message, origin) { };
-
-/** @memberof LoggerInstance */
-var end = function () { };
 
 /**
  *
@@ -186,26 +180,32 @@ var Log3 = function Log3 (options) {
         }
     };
 
-    logger.debug = function __logger_debug (message, location) {
-        logger(message, 'debug', location);
+    /** @memberof LoggerInstance */
+    logger.debug = function __logger_debug (message, origin) {
+        logger(message, 'debug', origin);
     };
 
-    logger.info  = function __logger_info (message, location) {
-        logger(message, 'info', location);
+    /** @memberof LoggerInstance */
+    logger.info  = function __logger_info (message, origin) {
+        logger(message, 'info', origin);
     };
 
-    logger.warn  = function __logger_warn (message, location) {
-        logger(message, 'warn', location);
+    /** @memberof LoggerInstance */
+    logger.warn  = function __logger_warn (message, origin) {
+        logger(message, 'warn', origin);
     };
 
-    logger.error = function __logger_error (message, location) {
-        logger(message, 'error', location);
+    /** @memberof LoggerInstance */
+    logger.error = function __logger_error (message, origin) {
+        logger(message, 'error', origin);
     };
 
-    logger.fatal = function __logger_fatal (message, location) {
-        logger(message, 'fatal', location);
+    /** @memberof LoggerInstance */
+    logger.fatal = function __logger_fatal (message, origin) {
+        logger(message, 'fatal', origin);
     };
-    
+
+    /** @memberof LoggerInstance */
     logger.end = function () {
         if (out) {
             out.end();
